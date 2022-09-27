@@ -8,7 +8,7 @@ var dotenv = require('dotenv').config(); //needed to protect twitter api details
 const request = require('request'); // hopefully stops heroku timeout
 var reqTimer = setTimeout(function wakeUp() {
    request("https://here-we-go-again.onrender.com/", function() {
- console.log("WAKE UP DYNO");
+      console.log("WAKE UP DYNO");
    });
    return reqTimer = setTimeout(wakeUp, 800000);
 }, 1200000);
